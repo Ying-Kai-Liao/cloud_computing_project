@@ -31,11 +31,11 @@ const client = new Client({
 // When the client is ready, run this code (only once).
 client.once(Events.ClientReady, (readyClient) => {
   console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-  const channelName = "images";
+  const channelName = "form";
   const channel = client.channels.cache.find(
     (c) =>
       c.type === ChannelType.GuildText &&
-      (c as GuildChannel).name === channelName
+      (c as TextChannel).name === channelName
   ) as TextChannel; // Only TextChannel can send messages
 
   if (channel) {

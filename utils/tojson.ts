@@ -2,7 +2,6 @@ import { config as configDotenv } from "dotenv";
 import OpenAI from "openai";
 import { ChatCompletionMessageParam, ChatCompletionTool } from "openai/resources";
 import { FormData } from "../types";
-import { describe } from "node:test";
 
 configDotenv();
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
